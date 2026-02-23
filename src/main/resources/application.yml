@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: vibeapp
+server:
+  port: 8080

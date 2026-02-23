@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vibe Coding | 바이브코딩</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-header {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a1a1a1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-slate-100 selection:bg-primary/30">
+    <!-- Navigation -->
+    <header class="glass-header fixed top-0 w-full z-50 border-b border-white/10">
+        <nav class="max-w-[1200px] mx-auto px-6 h-12 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-white text-xl">deployed_code</span>
+                <span class="font-bold tracking-tight text-white">Vibe Coding</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-xs font-medium text-white/60 hover:text-white transition-colors" href="#">Courses</a>
+                <a class="text-xs font-medium text-white/60 hover:text-white transition-colors" href="#">Philosophy</a>
+                <a class="text-xs font-medium text-white/60 hover:text-white transition-colors" href="#">Community</a>
+                <a class="text-xs font-medium text-white/60 hover:text-white transition-colors" href="#">Support</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-white text-black px-4 py-1 rounded-full text-[12px] font-bold hover:bg-slate-200 transition-all">
+                    Enroll
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 hero-gradient z-10"></div>
+                <img alt="Hero Background" class="w-full h-full object-cover"
+                    data-alt="High-tech minimalist workspace with glowing keyboard"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbP3uY4QI6wsFWjck0a0jxEp21zogUKKmeDfxEGtvYUoQg4jBHHYJJ0EPG2uaZALHH0xPjOvFxhfmQtcpplU6dB-SHsfxp6NFfrC_tKH4c_mos-n_Tq1PlbzS_1Bnr8st1_fiViql8vHxch2sRTKV4Yr-LLturS8i6E6GrEtZynTI3eGG_tj0v06871LHU5RmFN3oLL9yqCiVhsYDF4s_l9XAMP2POB5-BnpFabU_fsTv4mqmYwOhz2AVdLWCXWinELntSLj_p4Ho" />
+            </div>
+            <div class="relative z-20 text-center px-6 max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+                    바이브코딩: <br />
+                    당신의 코딩에 감각을 더하다
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-400 font-light mb-10 max-w-2xl mx-auto">
+                    High-performance engineering meets aesthetic design. <br class="hidden md:block" />
+                    Elevate your craft with our premium curriculum.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-all min-w-[200px]">
+                        Get Started
+                    </button>
+                    <a class="group flex items-center gap-2 text-primary text-lg font-medium hover:underline" href="#">
+                        Learn the philosophy
+                        <span
+                            class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+                <span class="material-symbols-outlined text-3xl">keyboard_double_arrow_down</span>
+            </div>
+        </section>
+        <!-- Philosophy Section -->
+        <section class="py-32 px-6 bg-background-dark">
+            <div class="max-w-[1000px] mx-auto text-center">
+                <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Our Philosophy</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-16 text-gradient">Coding is an Art.</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                    <div class="group">
+                        <div class="mb-6 h-px w-12 bg-primary transition-all group-hover:w-full"></div>
+                        <h3 class="text-xl font-bold mb-4">Craftsmanship</h3>
+                        <p class="text-slate-400 leading-relaxed font-light">
+                            We believe in writing code that is as beautiful as it is functional. Clean architecture is
+                            the foundation of quality.
+                        </p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-6 h-px w-12 bg-primary transition-all group-hover:w-full"></div>
+                        <h3 class="text-xl font-bold mb-4">Aesthetics</h3>
+                        <p class="text-slate-400 leading-relaxed font-light">
+                            Design-forward thinking integrated into every line of development. We don't just build, we
+                            compose.
+                        </p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-6 h-px w-12 bg-primary transition-all group-hover:w-full"></div>
+                        <h3 class="text-xl font-bold mb-4">Performance</h3>
+                        <p class="text-slate-400 leading-relaxed font-light">
+                            Zero-compromise speed and reliability. High-performance engineering for the modern global
+                            web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Product Cards (The Trinity) -->
+        <section class="py-24 px-6 bg-[#0a0a0a]">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <h2 class="text-4xl md:text-5xl font-bold">The Trinity of <br /> Modern Development</h2>
+                    <p class="text-slate-500 max-w-sm mb-2 font-light">Explore our deep-dive tracks designed for the
+                        0.1% of engineers.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Course 1 -->
+                    <div
+                        class="group relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-900 border border-white/5 transition-transform hover:-translate-y-2">
+                        <img alt="React Course"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Abstract blue glowing digital structure"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFLgjzjezlOxYkX4_h6gzu4ACnWWucY0kEjFljoqQhAM5HZ05lcosmM8adguqzMvP6F0N3oeFdNNJSTDXEUccWesY0_oCkc0Q2TokJdIPiWeEKDBF9NtXEQmw0k6QA3Wn90uVCkYRzfH_yowZCZPrfc8K8XK_PVQ1nSPMySUBsUlQADJIoKEY4jpeFsg-B1toq0bu5zVCOyO_cMXOGt1QZEYV--y8PpSZK_GqjTokFM65BNieHwabgLCO1NsyJj3lePh-2PEpSzX8" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
+                            <span class="text-primary text-xs font-bold uppercase mb-2">Frontend Artistry</span>
+                            <h3 class="text-2xl font-bold mb-2">React: The Art of Interaction</h3>
+                            <p
+                                class="text-slate-300 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Mastering fluid UI and high-performance component architecture.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Course 2 -->
+                    <div
+                        class="group relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-900 border border-white/5 transition-transform hover:-translate-y-2">
+                        <img alt="Rust Course"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Industrial metal texture and precision machinery"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc58agIIoUcuKdXKgEgB7l-Hb-gFRr-uNFHfEskHH-srXfzRxI_xFIGgBsh8ddSMNxm8wNPN8izAK4VGffyHuzcj37biAYKT5HGyZ6JceLG40HKPNztgRcwkWBTMqPsdKaLuufflF8b-WcJrOZ6a7h1xw7S9twHZqMJD6f6p2c2u0BzNAONbE3X6T3_3d0tEK83OyYDSfgwDnXlcDczi6w58AaUep0I48QowvtX84moTunUpmKjgK-oLPxHQZl4cv31JBNqhBoW6Q" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
+                            <span class="text-primary text-xs font-bold uppercase mb-2">System Engineering</span>
+                            <h3 class="text-2xl font-bold mb-2">Rust: Safety Meets Speed</h3>
+                            <p
+                                class="text-slate-300 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Building the safe, lightning-fast foundations of the future web.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Course 3 -->
+                    <div
+                        class="group relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-900 border border-white/5 transition-transform hover:-translate-y-2">
+                        <img alt="AI Course"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Artificial intelligence neural network visualization"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLSkuE_XIW7Vg-5Ws3_JzqyPJkuenVjL1RSxc_7fevLqtFnjSydPNgcmcQLNcCzlP6TGKBGRLbTqCz9gyLMmj5JaiNwAcZTo0GpsWQVZ-bEMDBH8IIjzjMSnuUv8-Rmr_wNFYuAU1ENm8azw0dCk4OgRtDM0I66FIoj7FR9T7suzUVfWRe-7VDhXX6i0z46qWftkRTsG-ywokaxTFR-f8hU7bu8s-AbRECAV1FXMScqe9LkNBli2ZhCnKe851OwOSykLfo9QueS3M" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
+                            <span class="text-primary text-xs font-bold uppercase mb-2">Cognitive Layer</span>
+                            <h3 class="text-2xl font-bold mb-2">AI: Next-Gen Intelligence</h3>
+                            <p
+                                class="text-slate-300 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Integrating advanced LLMs and neural architectures into your stack.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-40 px-6 bg-background-dark overflow-hidden">
+            <div class="max-w-[1200px] mx-auto relative">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+                <div class="relative z-10 text-center">
+                    <h2 class="text-5xl md:text-8xl font-bold mb-10 tracking-tighter">Ready to vibe?</h2>
+                    <p class="text-xl md:text-2xl text-slate-400 mb-12 max-w-xl mx-auto font-light">
+                        Join 10,000+ developers redefining the standard of software excellence.
+                    </p>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <button
+                            class="w-full md:w-auto bg-white text-black px-12 py-4 rounded-full font-bold text-xl hover:scale-105 transition-transform">
+                            Enroll Now
+                        </button>
+                        <button
+                            class="w-full md:w-auto bg-transparent border border-white/20 text-white px-12 py-4 rounded-full font-bold text-xl hover:bg-white/10 transition-colors">
+                            View Curriculum
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/5 py-20 px-6">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="material-symbols-outlined text-white text-2xl">deployed_code</span>
+                    <span class="font-bold text-xl tracking-tight text-white">Vibe Coding</span>
+                </div>
+                <p class="text-slate-500 max-w-xs font-light leading-relaxed">
+                    Elevating the world's engineering standards through aesthetic logic and uncompromising performance.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Explore</h4>
+                <ul class="space-y-4 text-slate-500 text-sm font-light">
+                    <li><a class="hover:text-primary transition-colors" href="#">React Track</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Rust Systems</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">AI Foundations</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Connect</h4>
+                <ul class="space-y-4 text-slate-500 text-sm font-light">
+                    <li><a class="hover:text-primary transition-colors" href="#">Twitter (X)</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Discord</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-[1200px] mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-600 text-xs font-light">© 2024 Vibe Coding Inc. All rights reserved.</p>
+            <div class="flex gap-8 text-xs text-slate-600 font-light">
+                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                <a class="hover:text-white transition-colors" href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
