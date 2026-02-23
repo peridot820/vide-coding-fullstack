@@ -106,6 +106,17 @@
             color: #818cf8;
             font-weight: 600;
         }
+
+        .btn-warning {
+            background: rgba(245, 158, 11, 0.1);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .btn-warning:hover {
+            background: rgba(245, 158, 11, 0.2);
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 
@@ -138,6 +149,7 @@
 
         <div class="btn-group">
             <a href="/posts" class="btn btn-outline">← Back to List</a>
+            <a th:href="@{/posts/{no}/edit(no=${post.no})}" class="btn btn-warning">Edit Post</a>
         </div>
     </div>
 </body>
