@@ -10,17 +10,24 @@ import java.util.List;
 @Repository
 public class PostRepository {
     private final List<Post> store = new ArrayList<>();
+    private static long sequence = 0L;
 
     public PostRepository() {
         // Init with 10 mock data
         for (int i = 1; i <= 10; i++) {
-            store.add(new Post(
-                    (long) i,
+            save(new Post(
+                    null,
                     "게시글 제목 " + i,
                     "게시글 내용입니다. " + i,
                     LocalDateTime.now().minusDays(10 - i),
                     i * 10));
         }
+    }
+
+    public Post save(Post post) {
+        post.setNo(++sequence);
+        store.add(post);
+        return post;
     }
 
     public List<Post> findAll() {

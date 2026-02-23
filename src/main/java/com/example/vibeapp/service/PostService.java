@@ -4,6 +4,7 @@ import com.example.vibeapp.domain.Post;
 import com.example.vibeapp.repository.PostRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -20,5 +21,12 @@ public class PostService {
 
     public Post findPost(Long no) {
         return postRepository.findByNo(no);
+    }
+
+    public void addPost(Post post) {
+        post.setCreatedAt(LocalDateTime.now());
+        post.setUpdatedAt(null);
+        post.setViews(0);
+        postRepository.save(post);
     }
 }
