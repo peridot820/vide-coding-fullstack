@@ -17,4 +17,8 @@ public class PostService {
     public List<Post> findPosts() {
         return postRepository.findAll();
     }
+
+    public Post findPost(Long no) {
+        return postRepository.findByNo(no);
+    }
 }
