@@ -138,6 +138,29 @@
         .btn-home:hover {
             color: var(--text-main);
         }
+
+        .btn-new {
+            display: inline-block;
+            background: linear-gradient(to right, #6366f1, #8b5cf6);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, opacity 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .btn-new:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -147,6 +170,10 @@
             <h1>Board Explorer</h1>
             <p style="color: var(--text-muted)">Discover interesting stories and shared knowledge</p>
         </header>
+
+        <div class="header-actions">
+            <a href="/posts/new" class="btn-new">+ New Post</a>
+        </div>
 
         <div class="card">
             <table>
