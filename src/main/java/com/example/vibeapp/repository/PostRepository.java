@@ -31,7 +31,21 @@ public class PostRepository {
     }
 
     public List<Post> findAll() {
-        return new ArrayList<>(store);
+        return store.stream()
+                .sorted((p1, p2) -> Long.compare(p2.getNo(), p1.getNo()))
+                .toList();
+    }
+
+    public List<Post> findByPage(int offset, int limit) {
+        return store.stream()
+                .sorted((p1, p2) -> Long.compare(p2.getNo(), p1.getNo()))
+                .skip(offset)
+                .limit(limit)
+                .toList();
+    }
+
+    public int totalCount() {
+        return store.size();
     }
 
     public Post findByNo(Long no) {

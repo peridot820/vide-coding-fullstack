@@ -42,4 +42,14 @@ public class PostService {
     public void deletePost(Long no) {
         postRepository.deleteByNo(no);
     }
+
+    public List<Post> findPostsPaged(int page, int size) {
+        int offset = (page - 1) * size;
+        return postRepository.findByPage(offset, size);
+    }
+
+    public int getTotalPages(int size) {
+        int totalCount = postRepository.totalCount();
+        return (int) Math.ceil((double) totalCount / size);
+    }
 }
