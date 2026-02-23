@@ -117,6 +117,18 @@
             background: rgba(245, 158, 11, 0.2);
             transform: translateY(-1px);
         }
+
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.1);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            cursor: pointer;
+        }
+
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.2);
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 
@@ -149,7 +161,12 @@
 
         <div class="btn-group">
             <a href="/posts" class="btn btn-outline">← Back to List</a>
+            <div style="flex: 1"></div>
             <a th:href="@{/posts/{no}/edit(no=${post.no})}" class="btn btn-warning">Edit Post</a>
+            <form th:action="@{/posts/{no}/delete(no=${post.no})}" method="post" style="display:inline"
+                onsubmit="return confirm('진짜 삭제하시겠습니까?')">
+                <button type="submit" class="btn btn-danger">Delete Post</button>
+            </form>
         </div>
     </div>
 </body>

@@ -40,4 +40,8 @@ public class PostRepository {
                 .findFirst()
                 .orElse(null);
     }
+
+    public void deleteByNo(Long no) {
+        store.removeIf(post -> post.getNo().equals(no));
+    }
 }
