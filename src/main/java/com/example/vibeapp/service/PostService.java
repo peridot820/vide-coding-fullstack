@@ -29,4 +29,13 @@ public class PostService {
         post.setViews(0);
         postRepository.save(post);
     }
+
+    public void updatePost(Long no, Post updateParam) {
+        Post post = postRepository.findByNo(no);
+        if (post != null) {
+            post.setTitle(updateParam.getTitle());
+            post.setContent(updateParam.getContent());
+            post.setUpdatedAt(LocalDateTime.now());
+        }
+    }
 }

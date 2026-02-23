@@ -157,7 +157,7 @@
         </header>
 
         <div class="card">
-            <form id="editForm" onsubmit="savePost(event)">
+            <form id="editForm" th:action="@{/posts/{no}/save(no=${post.no})}" method="post">
                 <div class="form-row">
                     <div class="form-group">
                         <label>No.</label>
@@ -201,12 +201,6 @@
         </div>
     </div>
 
-    <script>
-        function savePost(event) {
-            event.preventDefault();
-            alert("게시글 수정");
-        }
-    </script>
 </body>
 
 </html>
