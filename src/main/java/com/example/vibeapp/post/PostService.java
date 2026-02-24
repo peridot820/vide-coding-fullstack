@@ -1,7 +1,5 @@
-package com.example.vibeapp.service;
+package com.example.vibeapp.post;
 
-import com.example.vibeapp.domain.Post;
-import com.example.vibeapp.repository.PostRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -15,15 +13,11 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public List<Post> findPosts() {
-        return postRepository.findAll();
+    public Post findById(Long no) {
+        return postRepository.findById(no);
     }
 
-    public Post findPost(Long no) {
-        return postRepository.findByNo(no);
-    }
-
-    public void addPost(Post post) {
+    public void save(Post post) {
         post.setCreatedAt(LocalDateTime.now());
         post.setUpdatedAt(null);
         post.setViews(0);
@@ -31,7 +25,7 @@ public class PostService {
     }
 
     public void updatePost(Long no, Post updateParam) {
-        Post post = postRepository.findByNo(no);
+        Post post = postRepository.findById(no);
         if (post != null) {
             post.setTitle(updateParam.getTitle());
             post.setContent(updateParam.getContent());
@@ -40,16 +34,16 @@ public class PostService {
     }
 
     public void deletePost(Long no) {
-        postRepository.deleteByNo(no);
+        postRepository.deleteById(no);
     }
 
-    public List<Post> findPostsPaged(int page, int size) {
+    public List<Post> findAll(int page, int size) {
         int offset = (page - 1) * size;
-        return postRepository.findByPage(offset, size);
+        return postRepository.findAll(offset, size);
     }
 
     public int getTotalPages(int size) {
-        int totalCount = postRepository.totalCount();
+        int totalCount = postRepository.count();
         return (int) Math.ceil((double) totalCount / size);
     }
 }

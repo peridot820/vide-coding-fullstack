@@ -1,7 +1,5 @@
-package com.example.vibeapp.controller;
+package com.example.vibeapp.post;
 
-import com.example.vibeapp.domain.Post;
-import com.example.vibeapp.service.PostService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,35 +18,35 @@ public class PostController {
     @GetMapping("/posts")
     public String list(@RequestParam(defaultValue = "1") int page, Model model) {
         int size = 5;
-        model.addAttribute("posts", postService.findPostsPaged(page, size));
+        model.addAttribute("posts", postService.findAll(page, size));
         model.addAttribute("currentPage", page);
         model.addAttribute("totalPages", postService.getTotalPages(size));
-        return "posts";
+        return "post/posts";
     }
 
     @GetMapping("/posts/{no}")
     public String detail(@PathVariable Long no, Model model) {
-        Post post = postService.findPost(no);
+        Post post = postService.findById(no);
         model.addAttribute("post", post);
-        return "post_detail";
+        return "post/post_detail";
     }
 
     @GetMapping("/posts/new")
     public String showNewForm() {
-        return "post_new_form";
+        return "post/post_new_form";
     }
 
     @PostMapping("/posts/add")
     public String add(Post post) {
-        postService.addPost(post);
+        postService.save(post);
         return "redirect:/posts";
     }
 
     @GetMapping("/posts/{no}/edit")
     public String editForm(@PathVariable Long no, Model model) {
-        Post post = postService.findPost(no);
+        Post post = postService.findById(no);
         model.addAttribute("post", post);
-        return "post_edit_form";
+        return "post/post_edit_form";
     }
 
     @PostMapping("/posts/{no}/save")

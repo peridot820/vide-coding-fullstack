@@ -1,4 +1,4 @@
-package com.example.vibeapp;
+package com.example.vibeapp.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +10,6 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("message", "Hello, Vibe!");
-        return "index";
+        return "home/home";
     }
 }
