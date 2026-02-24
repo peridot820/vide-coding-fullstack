@@ -7,7 +7,7 @@ import java.util.List;
 @Mapper
 public interface PostRepository {
 
-    Post save(Post post);
+    int save(Post post);
 
     List<Post> findAll();
 
