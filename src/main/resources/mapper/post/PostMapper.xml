@@ -27,6 +27,10 @@
         LIMIT #{limit} OFFSET #{offset}
     </select>
 
+    <update id="incrementViews">
+        UPDATE POSTS SET VIEWS = VIEWS + 1 WHERE NO = #{no}
+    </update>
+
     <select id="count" resultType="int">
         SELECT COUNT(*) FROM POSTS
     </select>

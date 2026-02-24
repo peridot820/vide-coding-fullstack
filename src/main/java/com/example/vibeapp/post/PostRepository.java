@@ -9,6 +9,8 @@ public interface PostRepository {
 
     int save(Post post);
 
+    void incrementViews(Long no);
+
     List<Post> findAll();
 
     // MyBatis accepts params for paging
