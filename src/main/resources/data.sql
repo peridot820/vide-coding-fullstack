@@ -1,3 +1,5 @@
+DELETE FROM POSTS;
+
 INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('첫 번째 공지사항', '안녕하세요. VibeApp에 오신 것을 환영합니다.', 10);
 INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('두 번째 게시글', '스프링 부트와 MyBatis를 이용한 게시판 구현 예제입니다.', 5);
 INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('H2 데이터베이스 안내', 'H2는 인메모리 및 파일 모드를 지원하여 개발에 매우 편리합니다.', 0);
