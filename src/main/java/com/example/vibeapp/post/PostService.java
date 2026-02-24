@@ -40,7 +40,7 @@ public class PostService {
 
     public List<PostListDto> findAll(int page, int size) {
         int offset = (page - 1) * size;
-        return postRepository.findAll(offset, size).stream()
+        return postRepository.findAllWithPaging(offset, size).stream()
                 .map(PostListDto::from)
                 .toList();
     }
