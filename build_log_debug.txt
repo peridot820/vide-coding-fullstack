@@ -1,0 +1,37 @@
+
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/separ/.gradle/wrapper/dists/gradle-8.12-bin/cetblhg4pflnnks72fxwobvgv/gradle-8.12/lib/native-platform-0.22-milestone-27.jar)
+> Task :compileJava
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+C:\Users\separ\VideCoding\vide-coding-fullstack\src\main\java\com\example\vibeapp\config\H2ConsoleConfig.java:4: error: package org.h2.server.web does not exist
+import org.h2.server.web.WebServlet;
+                        ^
+C:\Users\separ\VideCoding\vide-coding-fullstack\src\main\java\com\example\vibeapp\config\H2ConsoleConfig.java:13: error: cannot find symbol
+        ServletRegistrationBean<Servlet> registrationBean = new ServletRegistrationBean<>(new WebServlet());
+                                                                                              ^
+  symbol:   class WebServlet
+  location: class H2ConsoleConfig
+2 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/separ/VideCoding/vide-coding-fullstack/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  C:\Users\separ\VideCoding\vide-coding-fullstack\src\main\java\com\example\vibeapp\config\H2ConsoleConfig.java:4: error: package org.h2.server.web does not exist
+  import org.h2.server.web.WebServlet;
+                          ^
+  2 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 6s
+1 actionable task: 1 executed

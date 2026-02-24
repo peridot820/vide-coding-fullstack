@@ -13,22 +13,23 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public Post findById(Long no) {
-        return postRepository.findById(no);
+    public PostResponseDTO findById(Long no) {
+        Post post = postRepository.findById(no);
+        return PostResponseDTO.from(post);
     }
 
-    public void save(Post post) {
+    public void save(PostCreateDto dto) {
+        Post post = dto.toEntity();
         post.setCreatedAt(LocalDateTime.now());
         post.setUpdatedAt(null);
         post.setViews(0);
         postRepository.save(post);
     }
 
-    public void updatePost(Long no, Post updateParam) {
+    public void updatePost(Long no, PostUpdateDto dto) {
         Post post = postRepository.findById(no);
         if (post != null) {
-            post.setTitle(updateParam.getTitle());
-            post.setContent(updateParam.getContent());
+            dto.updateEntity(post);
             post.setUpdatedAt(LocalDateTime.now());
         }
     }
@@ -37,9 +38,11 @@ public class PostService {
         postRepository.deleteById(no);
     }
 
-    public List<Post> findAll(int page, int size) {
+    public List<PostListDto> findAll(int page, int size) {
         int offset = (page - 1) * size;
-        return postRepository.findAll(offset, size);
+        return postRepository.findAll(offset, size).stream()
+                .map(PostListDto::from)
+                .toList();
     }
 
     public int getTotalPages(int size) {

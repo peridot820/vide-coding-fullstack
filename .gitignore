@@ -43,3 +43,6 @@ build_log.txt
 *.swp
 *~
 .DS_Store
+/data/
+*.mv.db
+*.trace.db

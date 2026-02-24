@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.vibeapp.post.PostMapper">
+    <resultMap id="PostResult" type="com.example.vibeapp.post.Post">
+        <id property="no" column="no" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+    </resultMap>
+
+    <select id="findById" resultMap="PostResult" parameterType="long">
+        SELECT * FROM post WHERE no = #{no}
+    </select>
+
+    <select id="findAll" resultMap="PostResult">
+        SELECT * FROM post
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="no" parameterType="com.example.vibeapp.post.Post">
+        INSERT INTO post (title, content) VALUES (#{title}, #{content})
+    </insert>
+
+    <update id="update" parameterType="com.example.vibeapp.post.Post">
+        UPDATE post SET title = #{title}, content = #{content} WHERE no = #{no}
+    </update>
+
+    <delete id="delete" parameterType="long">
+        DELETE FROM post WHERE no = #{no}
+    </delete>
+</mapper>

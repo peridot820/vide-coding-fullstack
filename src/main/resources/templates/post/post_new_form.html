@@ -129,6 +129,12 @@
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.1);
         }
+
+        .field-error {
+            color: #ef4444;
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
     </style>
 </head>
 
@@ -140,15 +146,17 @@
         </header>
 
         <div class="card">
-            <form id="postForm" action="/posts/add" method="post">
+            <form id="postForm" action="/posts/add" th:object="${post}" method="post">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter post title" required>
+                    <input type="text" id="title" th:field="*{title}" placeholder="Enter post title">
+                    <div class="field-error" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">제목 오류</div>
                 </div>
 
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea id="content" name="content" placeholder="Write your story here..." required></textarea>
+                    <textarea id="content" th:field="*{content}" placeholder="Write your story here..."></textarea>
+                    <div class="field-error" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">내용 오류</div>
                 </div>
 
                 <div class="btn-group">

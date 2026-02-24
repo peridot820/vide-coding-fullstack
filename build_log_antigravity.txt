@@ -1,0 +1,18 @@
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\separ\VideCoding\vide-coding-fullstack\build.gradle' line: 3
+
+* What went wrong:
+An exception occurred applying plugin request [id: 'org.springframework.boot', version: '4.0.1']
+> Failed to apply plugin 'org.springframework.boot'.
+   > Spring Boot plugin requires Gradle 8.x (8.14 or later) or 9.x. The current version is Gradle 8.12
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
