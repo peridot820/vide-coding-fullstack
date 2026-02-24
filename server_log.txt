@@ -1,0 +1,88 @@
+Starting a Gradle Daemon, 9 busy and 1 incompatible and 5 stopped Daemons could not be reused, use --status for details
+> Task :compileJava
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :resolveMainClassName
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2026-02-24T15:39:35.912+09:00  INFO 42464 --- [  restartedMain] com.example.vibeapp.VibeApp              : Starting VibeApp using Java 21.0.9 with PID 42464 (C:\Users\separ\VideCoding\vide-coding-fullstack\build\classes\java\main started by separ in C:\Users\separ\VideCoding\vide-coding-fullstack)
+2026-02-24T15:39:35.917+09:00  INFO 42464 --- [  restartedMain] com.example.vibeapp.VibeApp              : No active profile set, falling back to 1 default profile: "default"
+2026-02-24T15:39:35.920+09:00 DEBUG 42464 --- [  restartedMain] o.s.boot.SpringApplication               : Loading source class com.example.vibeapp.VibeApp
+2026-02-24T15:39:35.989+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/Users/separ/VideCoding/vide-coding-fullstack/build/classes/java/main/, file:/C:/Users/separ/VideCoding/vide-coding-fullstack/build/resources/main/]
+2026-02-24T15:39:35.989+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
+2026-02-24T15:39:35.989+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-02-24T15:39:35.989+09:00  INFO 42464 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-24T15:39:35.989+09:00  INFO 42464 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-24T15:39:35.990+09:00 DEBUG 42464 --- [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14bb3677
+2026-02-24T15:39:36.872+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Searching for mappers annotated with @Mapper
+2026-02-24T15:39:36.874+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Using auto-configuration base package 'com.example.vibeapp'
+2026-02-24T15:39:36.943+09:00  INFO 42464 --- [  restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'h2Console' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=h2ConsoleConfig; factoryMethodName=h2Console; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/example/vibeapp/config/H2ConsoleConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration; factoryMethodName=h2Console; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/boot/autoconfigure/h2/H2ConsoleAutoConfiguration.class]]
+2026-02-24T15:39:37.109+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\classes\java\main\com\example\vibeapp\post\PostRepository.class]
+2026-02-24T15:39:37.110+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Identified candidate component class: file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\classes\java\main\com\example\vibeapp\post\PostTagRepository.class]
+2026-02-24T15:39:37.112+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'postRepository' and 'com.example.vibeapp.post.PostRepository' mapperInterface
+2026-02-24T15:39:37.114+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Creating MapperFactoryBean with name 'postTagRepository' and 'com.example.vibeapp.post.PostTagRepository' mapperInterface
+2026-02-24T15:39:37.610+09:00 DEBUG 42464 --- [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\separ\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\3.4.3\a7138bcecd59ed27660b3894a7812d65db4951e6\spring-boot-3.4.3.jar
+2026-02-24T15:39:37.610+09:00 DEBUG 42464 --- [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\separ\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\3.4.3\a7138bcecd59ed27660b3894a7812d65db4951e6\spring-boot-3.4.3.jar
+2026-02-24T15:39:37.612+09:00 DEBUG 42464 --- [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-02-24T15:39:37.675+09:00  INFO 42464 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-24T15:39:37.696+09:00  INFO 42464 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-24T15:39:37.697+09:00  INFO 42464 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-02-24T15:39:37.759+09:00  INFO 42464 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-24T15:39:37.759+09:00 DEBUG 42464 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-02-24T15:39:37.759+09:00  INFO 42464 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1769 ms
+2026-02-24T15:39:37.781+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-02-24T15:39:37.782+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: h2Console urls=[/h2-console/*], dispatcherServlet urls=[/]
+2026-02-24T15:39:37.815+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-02-24T15:39:37.817+09:00 DEBUG 42464 --- [  restartedMain] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-02-24T15:39:37.818+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-02-24T15:39:37.880+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2026-02-24T15:39:37.881+09:00  INFO 42464 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-24T15:39:38.210+09:00  INFO 42464 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA
+2026-02-24T15:39:38.212+09:00  INFO 42464 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-24T15:39:38.215+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\resources\main\schema.sql]
+2026-02-24T15:39:38.223+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE IF NOT EXISTS POSTS ( NO BIGINT AUTO_INCREMENT PRIMARY KEY, TITLE VARCHAR(200) NOT NULL, CONTENT CLOB NOT NULL, CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP, UPDATED_AT TIMESTAMP NULL DEFAULT NULL, VIEWS INT DEFAULT 0 )
+2026-02-24T15:39:38.223+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE IF NOT EXISTS POST_TAGS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, POST_NO BIGINT NOT NULL, TAG_NAME VARCHAR(50) NOT NULL, FOREIGN KEY (POST_NO) REFERENCES POSTS(NO) ON DELETE CASCADE )
+2026-02-24T15:39:38.226+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\resources\main\schema.sql] in 8 ms.
+2026-02-24T15:39:38.232+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2026-02-24T15:39:38.232+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\resources\main\data.sql]
+2026-02-24T15:39:38.244+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 13 returned as update count for SQL: DELETE FROM POSTS
+2026-02-24T15:39:38.247+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('泥?踰덉㎏ 怨듭??ы빆', '?덈뀞?섏꽭?? VibeApp???ㅼ떊 寃껋쓣 ?섏쁺?⑸땲??', 10)
+2026-02-24T15:39:38.247+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('??踰덉㎏ 寃뚯떆湲', '?ㅽ봽留?遺?몄? MyBatis瑜??댁슜??寃뚯떆??援ы쁽 ?덉젣?낅땲??', 5)
+2026-02-24T15:39:38.249+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('H2 ?곗씠?곕쿋?댁뒪 ?덈궡', 'H2???몃찓紐⑤━ 諛??뚯씪 紐⑤뱶瑜?吏?먰븯??媛쒕컻??留ㅼ슦 ?몃━?⑸땲??', 0)
+2026-02-24T15:39:38.249+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('MyBatis 留ㅽ띁 ?ㅼ젙 ??, 'XML 留ㅽ띁 ?뚯씪???꾩튂??application.yml?먯꽌 ?ㅼ젙?????덉뒿?덈떎.', 3)
+2026-02-24T15:39:38.249+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('媛吏??곗씠???앹꽦?섍린', '?뚯뒪?몃? ?꾪빐 12媛쒖쓽 ?섑뵆 ?곗씠?곕? ?앹꽦 以묒엯?덈떎.', 7)
+2026-02-24T15:39:38.251+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('Spring Boot 3.4 ?좉린??, '?ㅽ봽留?遺??3.4 踰꾩쟾?먯꽌 異붽???二쇱슂 湲곕뒫?ㅼ쓣 ?뚯븘遊낅땲??', 12)
+2026-02-24T15:39:38.251+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('?먮컮 21 LTS???μ젏', '?먮컮 21? 媛???ㅻ젅?????곸떊?곸씤 湲곕뒫???ы븿?섍퀬 ?덉뒿?덈떎.', 25)
+2026-02-24T15:39:38.251+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('??꾨━???쒗뵆由??붿쭊', 'Thymeleaf???쒕쾭 ?ъ씠???먮컮 ?쒗뵆由??붿쭊?쇰줈 ?멸린媛 ?믪뒿?덈떎.', 8)
+2026-02-24T15:39:38.252+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('Jakarta EE ?꾪솚 媛?대뱶', 'javax?먯꽌 jakarta ?⑦궎吏濡쒖쓽 ?꾪솚 ??二쇱쓽???먯쓣 怨듭쑀?⑸땲??', 2)
+2026-02-24T15:39:38.252+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('濡щ났(Lombok) ?쒖슜踰?, 'Getter, Setter ?깆쓣 ?먮룞?쇰줈 ?앹꽦?섏뿬 肄붾뱶 ?묒쓣 以꾩뿬以띾땲??', 15)
+2026-02-24T15:39:38.252+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('洹몃젅?대뱾 鍮뚮뱶 理쒖쟻??, '鍮뚮뱶 ?띾룄瑜??믪씠湲??꾪븳 ?ㅼ뼇??洹몃젅?대뱾 ?ㅼ젙 ?곸엯?덈떎.', 4)
+2026-02-24T15:39:38.254+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: INSERT INTO POSTS (TITLE, CONTENT, VIEWS) VALUES ('留덉?留??뚯뒪???곗씠??, '?대몢 踰덉㎏ ?섑뵆 ?곗씠?곌? ?깃났?곸쑝濡??낅젰?섏뿀?듬땲??', 1)
+2026-02-24T15:39:38.254+09:00 DEBUG 42464 --- [  restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\resources\main\data.sql] in 22 ms.
+2026-02-24T15:39:38.569+09:00 DEBUG 42464 --- [  restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Parsed mapper file: 'file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\resources\main\mapper\post\PostMapper.xml]'
+2026-02-24T15:39:38.582+09:00 DEBUG 42464 --- [  restartedMain] o.mybatis.spring.SqlSessionFactoryBean   : Parsed mapper file: 'file [C:\Users\separ\VideCoding\vide-coding-fullstack\build\resources\main\mapper\post\PostTagMapper.xml]'
+2026-02-24T15:39:38.867+09:00 DEBUG 42464 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2026-02-24T15:39:38.962+09:00 DEBUG 42464 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-24T15:39:38.998+09:00 DEBUG 42464 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-24T15:39:39.082+09:00 DEBUG 42464 --- [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-24T15:39:39.090+09:00 DEBUG 42464 --- [  restartedMain] o.m.s.b.a.MybatisAutoConfiguration       : Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2026-02-24T15:39:39.114+09:00  INFO 42464 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/testdb'
+2026-02-24T15:39:39.227+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.d.livereload.LiveReloadServer      : Starting live reload server on port 35729
+2026-02-24T15:39:39.236+09:00  INFO 42464 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-24T15:39:39.273+09:00  INFO 42464 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-24T15:39:39.280+09:00  INFO 42464 --- [  restartedMain] com.example.vibeapp.VibeApp              : Started VibeApp in 3.947 seconds (process running for 4.428)
+2026-02-24T15:39:39.284+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-02-24T15:39:39.286+09:00 DEBUG 42464 --- [  restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[#1,main,5,main]
+2026-02-24T15:39:39.286+09:00 DEBUG 42464 --- [  restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
+2026-02-24T15:39:39.286+09:00 DEBUG 42464 --- [  restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.example.vibeapp.VibeApp with URLs [file:/C:/Users/separ/VideCoding/vide-coding-fullstack/build/classes/java/main/, file:/C:/Users/separ/VideCoding/vide-coding-fullstack/build/resources/main/]
+2026-02-24T15:39:39.287+09:00 DEBUG 42464 --- [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC

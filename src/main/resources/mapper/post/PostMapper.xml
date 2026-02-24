@@ -31,6 +31,12 @@
         UPDATE POSTS SET VIEWS = VIEWS + 1 WHERE NO = #{no}
     </update>
 
+    <update id="update">
+        UPDATE POSTS 
+        SET TITLE = #{title}, CONTENT = #{content}, UPDATED_AT = #{updatedAt}
+        WHERE NO = #{no}
+    </update>
+
     <select id="count" resultType="int">
         SELECT COUNT(*) FROM POSTS
     </select>

@@ -58,13 +58,42 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        .content {
+        .post-content {
             line-height: 1.8;
             color: #cbd5e1;
+            /* Changed from #2d3436 to match existing .content color */
             font-size: 1.1rem;
+            /* Added from existing .content */
             white-space: pre-wrap;
             margin-bottom: 40px;
+            /* Changed from 2rem to match existing .content margin */
             min-height: 200px;
+        }
+
+        .post-tags {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            /* Changed from #eee to match theme border */
+        }
+
+        .tag-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            /* Changed from #636e72 to match theme muted text */
+            margin-right: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            /* Changed from #f1f2f6 to match theme */
+            color: var(--text-main);
+            /* Changed from #535c68 to match theme main text */
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            display: inline-block;
         }
 
         .footer-meta {
@@ -143,8 +172,14 @@
         </header>
 
         <div class="card">
-            <div class="content" th:text="${post.content}">
+            <div class="post-content" th:text="${post.content}">
                 여기에 게시글 내용이 출력됩니다.
+            </div>
+
+            <div class="post-tags" th:if="${not #strings.isEmpty(post.tags)}">
+                <span class="tag-label">Tags:</span>
+                <span class="tag" th:each="tag : ${#strings.arraySplit(post.tags, ',')}"
+                    th:text="${#strings.trim(tag)}">tag</span>
             </div>
 
             <div class="footer-meta">

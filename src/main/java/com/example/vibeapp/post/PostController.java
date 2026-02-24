@@ -36,7 +36,7 @@ public class PostController {
 
     @GetMapping("/posts/new")
     public String showNewForm(Model model) {
-        model.addAttribute("post", new PostCreateDto("", ""));
+        model.addAttribute("post", new PostCreateDto("", "", ""));
         return "post/post_new_form";
     }
 
@@ -65,6 +65,7 @@ public class PostController {
             PostUpdateDto updatedPostWithMetadata = new PostUpdateDto(
                     post.title(),
                     post.content(),
+                    post.tags(), // Keep the user's input
                     originalPost.no(),
                     originalPost.views(),
                     originalPost.createdAt(),
